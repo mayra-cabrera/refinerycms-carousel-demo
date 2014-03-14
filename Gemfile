@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.3'
+gem 'rails', '3.2.16'
 
 # Sqlite in dev, postgres in production
 
@@ -15,12 +15,13 @@ end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.1.5'
-  gem 'coffee-rails', '~> 3.1.1'
+  gem 'sass-rails',   '~> 3.2.3'
+  gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
 end
 
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -45,7 +46,7 @@ gem "heroku"
 
 gem 'fog'
 
-gem "refinerycms", :git => "git://github.com/resolve/refinerycms.git"
+gem 'refinerycms', git: "git://github.com/mayra-cabrera/refinerycms.git", branch: "2-1-stable"
 
 #gem "refinerycms-carousel", :path => "../refinerycms-carousel"
 gem "refinerycms-carousel", '1.0', :path => "vendor/engines"

@@ -1,6 +1,6 @@
 class CreateRefinerycmsSettingsSchema < ActiveRecord::Migration
-  def self.up
-    create_table ::Refinery::Setting.table_name, :force => true do |t|
+  def up
+    create_table :refinery_setting, :force => true do |t|
       t.string   "name"
       t.text     "value"
       t.boolean  "destroyable",             :default => true
@@ -11,10 +11,10 @@ class CreateRefinerycmsSettingsSchema < ActiveRecord::Migration
       t.string   "callback_proc_as_string"
     end
 
-    add_index ::Refinery::Setting.table_name, ["name"], :name => "index_#{::Refinery::Setting.table_name}_on_name"
+    add_index :refinery_setting, :name
   end
 
-  def self.down
+  def down
     [::Refinery::Setting].reject{|m|
       !(defined?(m) and m.respond_to?(:table_name))
     }.each do |model|

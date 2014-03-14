@@ -1,4 +1,5 @@
 RefinerycmsCarouselDemo::Application.routes.draw do
+  mount Refinery::Core::Engine, :at => '/' 
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

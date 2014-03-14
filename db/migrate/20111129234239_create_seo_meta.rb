@@ -1,6 +1,6 @@
 class CreateSeoMeta < ActiveRecord::Migration
 
-  def self.up
+  def up
     create_table :seo_meta do |t|
       t.integer :seo_meta_id
       t.string :seo_meta_type
@@ -16,7 +16,7 @@ class CreateSeoMeta < ActiveRecord::Migration
     add_index :seo_meta, [:seo_meta_id, :seo_meta_type]
   end
 
-  def self.down
+  def down
     drop_table :seo_meta
   end
 

@@ -1,6 +1,6 @@
 class AttachSeoMeta < ActiveRecord::Migration
 
-  def self.up
+  def up
     # Grab the attributes of the records that currently exist
     existing_translations = ::Refinery::Page.translation_class.all.map(&:attributes)
 
@@ -32,7 +32,7 @@ class AttachSeoMeta < ActiveRecord::Migration
     ::Refinery::Page.reset_column_information
   end
 
-  def self.down
+  def down
     # Grab the attributes of the records that currently exist
     existing_translations = ::Refinery::Page.translation_class.all.map(&:attributes)
 
